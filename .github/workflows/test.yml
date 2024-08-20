@@ -2,7 +2,7 @@ name: Test Self-Hosted Runner
 on: [push]
 jobs:
   test:
-    runs-on: self-hosted
+    runs-on: github-actions
     steps:
       - uses: actions/checkout@v2
       - name: Run a test command
