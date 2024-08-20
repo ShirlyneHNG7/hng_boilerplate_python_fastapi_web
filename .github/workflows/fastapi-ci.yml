@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: self-hosted
+    runs-on: github-actions
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
