@@ -1,0 +1,22 @@
+name: Actions Runner Controller Demo
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: github-actions
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one-line script
+      run: echo "This job is now running on a self-hosted runner!"
+    - name: Run multi-line script
+      run: |
+        echo "Runner name: ${{ runner.name }}"
+        echo "Runner OS: ${{ runner.os }}"
+        echo "Repository: ${{ github.repository }}"
+        echo "Event that triggered workflow: ${{ github.event_name }}"
