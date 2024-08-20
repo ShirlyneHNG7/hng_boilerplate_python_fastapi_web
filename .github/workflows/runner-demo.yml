@@ -9,7 +9,7 @@ on:
 
 jobs:
   Explore-GitHub-Actions:
-    runs-on: self-hosted
+    runs-on: github-actions
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line script
